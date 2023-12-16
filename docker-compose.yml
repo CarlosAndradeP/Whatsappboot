@@ -7,3 +7,5 @@ services:
     restart: always
     environment:
       - TOKEN_DO_BOT=SEU_TOKEN_DO_BOT
+    ports:
+      - 3000:3000
