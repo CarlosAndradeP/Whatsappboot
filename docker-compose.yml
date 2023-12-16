@@ -1,10 +1,9 @@
-FROM python:3.8
+version: '3.8'
 
-# Instale as dependências do bot
-RUN pip install -r requirements.txt
-
-# Copie o código do bot para o container
-COPY . /app
-
-# Defina o ponto de entrada do bot
-ENTRYPOINT ["python", "app.py"]
+services:
+  bot:
+    image: meu-bot:latest
+    container_name: meu-bot
+    restart: always
+    environment:
+      - TOKEN_DO_BOT=SEU_TOKEN_DO_BOT
